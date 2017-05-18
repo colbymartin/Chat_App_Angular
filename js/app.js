@@ -1,4 +1,4 @@
-const app = angular.module('ChatApp', []);
+const app = angular.module('ChatApp', ['angularMoment']);
 
 app.controller('MessageListController', function ($scope, MessageService) {
     $scope.messages = MessageService.getMessages();
@@ -24,7 +24,7 @@ app.factory('MessageService', function ($http) {
     $http.get('https://tiy-28202.herokuapp.com/chats').then(function (response) {
         const log = response.data.chats;
 
-        for (let i = 0; i < log.length; i++) {
+        for (let i = log.length - 1; i >= 0; i--) {
             messages.push({
                 author: log[i].from,
                 content: log[i].message,
@@ -48,7 +48,7 @@ return {
         $http.post('https://tiy-28202.herokuapp.com/chats', JSON.stringify(data)).then(function (response) {
             messages.splice(0, messages.length);
             const log = response.data.chats;
-            for (let i = 0; i < log.length; i++) {
+            for (let i = log.length - 1; i >= 0; i--) {
                 messages.push({
                     author: log[i].from,
                     content: log[i].message,

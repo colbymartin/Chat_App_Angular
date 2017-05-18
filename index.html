@@ -6,6 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab:600,700" rel="stylesheet">
     <script src="app.js"></script>
 </head>
@@ -23,7 +25,7 @@
                 <li ng-repeat="message in messages">
                     <p class="author">{{message.author}} <span id="says">says...</span></p>
                     <p class="content">{{message.content}}</p>
-                    <p class="time">{{message.time}}</p>
+                    <p class="time" am-time-ago="message.time"></p>
                 </li>
             </ul>
         <div>
