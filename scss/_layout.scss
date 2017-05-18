@@ -1,0 +1,21 @@
+body {
+    h1 {
+        text-align: center;
+    }
+    main {
+        @include grid-row();
+        section {
+            @include grid-column-offset(4);
+            @include grid-column(4);
+        }
+        div {
+            @include grid-row();
+            margin-top: 40px;
+            ul {
+                @include grid-column-offset(4);
+                @include grid-column(4);
+            }
+  
+        }
+    }
+}

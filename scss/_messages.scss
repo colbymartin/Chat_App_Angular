@@ -1,0 +1,23 @@
+main div {
+    height: 500px;
+    // overflow: auto;
+    max-height: 100%;
+    ul {
+        list-style: none;
+        p {
+            margin: 0;
+        }
+        .author {
+            font-weight: 700;
+            font-size: 1.5em;
+            font-family: $header-font;
+            #says {
+                font-size: .75em;
+            }
+        }
+        .time {
+            font-size: .75em;
+        }
+    }
+}
+   

@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Colby Martin: Chat App using Angular</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab:600,700" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="ChatApp">
+    <h1>WHERE THE WILD THINGS CHAT</h1>
+    <main ng-controller="MessageListController">
+        <section ng-controller="MessageAddController">
+            <input type="text" placeholder="Your Majesty's Name" id="username" ng-model="my_name">
+            <input type="text" placeholder="Your Decree" id="message" ng-model="my_message">
+            <button ng-click="add()">LET THE WILD RUMPUS START</button>
+        </section>
+        <div>
+            <ul>
+                <li ng-repeat="message in messages">
+                    <p class="author">{{message.author}} <span id="says">says...</span></p>
+                    <p class="content">{{message.content}}</p>
+                    <p class="time">{{message.time}}</p>
+                </li>
+            </ul>
+        <div>
+
+    </main>
+</body>
+
+</html>

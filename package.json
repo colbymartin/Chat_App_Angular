@@ -1,0 +1,27 @@
+{
+  "name": "Chat_App_Angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbymartin/Chat_App_Angular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colbymartin/Chat_App_Angular/issues"
+  },
+  "homepage": "https://github.com/colbymartin/Chat_App_Angular#readme",
+  "dependencies": {
+    "@types/node": "^7.0.18",
+    "foundation-sites": "^6.3.1",
+    "gulp": "^3.9.1",
+    "gulp-browser": "^3.0.4",
+    "gulp-sass": "^3.1.0"
+  }
+}

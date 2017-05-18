@@ -1,0 +1,29 @@
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid; 
+
+$header-font: 'Amatic SC', cursive;
+$primary-font: 'Josefin Slab', serif;
+
+body{
+    color: white;
+    background: url('http://www.pptbackground.net/background/Where-the-Wild-Things-Are-PPT-Background-for-Powerpoint-Templates.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-family: $header-font;
+    font-size: 90px;
+    margin: 40px 0px 0px 0px;
+}
+
+main {
+    font-family: $primary-font;
+}
+@import "layout";
+@import "messages";
+@import "compose";
